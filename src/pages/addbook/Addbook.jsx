@@ -52,7 +52,10 @@ const Addbook = () => {
     });
     formData.append("image", image);
 
-    const response = await axios.post("http://localhost:3000/book", formData);
+    const response = await axios.post(
+      "https://mern-books-backend-71em.onrender.com/book",
+      formData
+    );
     if (response.status === 201) {
       navigate("/");
     } else {
